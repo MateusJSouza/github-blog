@@ -1,16 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      'body': ['Nunito', 'sans-serif'],
+      body: ['Nunito', 'sans-serif'],
     },
     extend: {
+      gridTemplateColumns: {
+        app: 'repeat(auto-fit, minmax(26rem, 1fr))',
+      },
+
       backgroundImage: {
-        'header-image': "url('/src/assets/header-bg.png')"
+        'header-image': "url('/src/assets/header-bg.png')",
       },
 
       colors: {
@@ -24,10 +25,9 @@ export default {
         'base-post': '#112131',
         'base-profile': '#0B1B2B',
         'base-background': '#071422',
-        'base-input': '#040F1A'
+        'base-input': '#040F1A',
       },
     },
   },
   plugins: [],
 }
-
